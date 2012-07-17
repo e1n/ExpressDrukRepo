@@ -9,5 +9,6 @@
   
   <modules>
       <module>ExpressDrukEntities</module>
+      <module>ExpressDrukEJB</module>
   </modules>
 </project>
