@@ -2,3 +2,4 @@
 .DS_Store
 /ExpressDrukEntities/target/
 /ExpressDrukEJB/nb-configuration.xml
+/ExpressDrukEJB/target/
