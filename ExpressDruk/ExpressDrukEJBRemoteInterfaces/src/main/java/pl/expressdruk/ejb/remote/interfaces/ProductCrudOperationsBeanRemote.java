@@ -1,4 +1,4 @@
-package pl.expressdruk.ejb.persistency;
+package pl.expressdruk.ejb.remote.interfaces;
 
 import javax.ejb.Remote;
 import pl.expressdruk.entities.Product;

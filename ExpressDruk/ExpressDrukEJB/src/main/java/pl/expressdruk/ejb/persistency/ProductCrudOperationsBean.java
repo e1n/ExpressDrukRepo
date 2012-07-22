@@ -1,5 +1,6 @@
 package pl.expressdruk.ejb.persistency;
 
+import pl.expressdruk.ejb.remote.interfaces.ProductCrudOperationsBeanRemote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
