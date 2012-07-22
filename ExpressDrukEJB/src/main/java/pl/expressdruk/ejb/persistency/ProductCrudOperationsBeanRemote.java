@@ -1,10 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package pl.expressdruk.ejb.persistency;
 
 import javax.ejb.Remote;
+import pl.expressdruk.entities.Product;
 
 /**
  *
@@ -12,5 +9,7 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface ProductCrudOperationsBeanRemote {
+    
+    public void persist(Product product);
     
 }

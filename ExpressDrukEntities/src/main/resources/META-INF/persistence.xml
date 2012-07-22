@@ -4,8 +4,8 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
  http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
     <persistence-unit name="expressdruk" transaction-type="JTA">
-        <jta-data-source>jdbc/expressDruk</jta-data-source>
         <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <jta-data-source>jdbc/expressDruk</jta-data-source>
         <class>pl.expressdruk.entities.Product</class>
         <class>pl.expressdruk.entities.ProductParameter</class>
         <class>pl.expressdruk.entities.ProductParameterValue</class>
