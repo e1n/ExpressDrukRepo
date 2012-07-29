@@ -12,7 +12,8 @@
         <module>ExpressDrukEntities</module>
         <module>ExpressDrukClient</module>
         <module>ExpressDrukEJBRemoteInterfaces</module>
-    </modules>
+        <module>ExpressDrukWeb</module>
+  </modules>
   
     <build>
         <pluginManagement>
