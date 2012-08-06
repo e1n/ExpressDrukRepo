@@ -6,8 +6,8 @@
         <groupId>pl.expressdruk</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>pl.expressdruk.web</groupId>
-    <artifactId>ExpressDrukWeb</artifactId>
+    <groupId>pl.expressdruk</groupId>
+    <artifactId>web</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 	<!-- TODO project name  -->
@@ -69,6 +69,19 @@
             <version>${jetty.version}</version>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>pl.expressdruk</groupId>
+            <artifactId>entities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.expressdruk</groupId>
+            <artifactId>remote-interfaces</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        
+        
     </dependencies>
     <build>
         <resources>

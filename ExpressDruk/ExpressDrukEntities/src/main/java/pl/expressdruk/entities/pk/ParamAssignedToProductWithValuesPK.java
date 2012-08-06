@@ -14,7 +14,7 @@ public class ParamAssignedToProductWithValuesPK implements Serializable {
     public ParamAssignedToProductWithValuesPK() {
     }
 
-    public ParamAssignedToProductWithValuesPK(int product, int productParameter, int productParameterValue) {
+    public ParamAssignedToProductWithValuesPK(int product, int productParameter) {
         this.product = product;
         this.productParameter = productParameter;
     }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://apache.wicket.com/wicket" xml:lang="en" lang="en">
+    <head>
+        <title>Product administration</title>
+    </head>
+    <body>
+        <h1>Add new product !</h1>
+        <div wicket:id="feedback"></div>
+        <form wicket:id="form">
+            <label for="product_name">Name</label>
+            <input type="text" id="product_name" wicket:id="name" size="20" />
+            <br />
+            <label for="product_description">Description</label>
+            <textarea id="product_description" wicket:id="description" cols="20" rows="5" />
+            <br />
+            <input type="submit" value="Add" />
+        </form>
+    </body>
+</html>

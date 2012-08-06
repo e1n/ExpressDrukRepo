@@ -49,6 +49,10 @@
                             <artifactId>remote-interfaces</artifactId>
                             <bundleFileName>expressdruk-remote-interfaces.jar</bundleFileName>
                         </jarModule>
+                        <webModule>
+                            <groupId>pl.expressdruk</groupId>
+                            <artifactId>web</artifactId>
+                        </webModule>
                     </modules>
                 </configuration>
             </plugin>
@@ -67,6 +71,12 @@
             <artifactId>ejb</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.expressdruk</groupId>
+            <artifactId>web</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
         </dependency>
     </dependencies>
 
