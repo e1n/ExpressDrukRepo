@@ -10,9 +10,14 @@ import javax.persistence.*;
  * @author e1n
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name=ProductParameter.GET_ALL_QUERY, query="SELECT pp FROM ProductParameter pp ORDER BY pp.id ASC")
+})
 @Table(name="product_parameter", uniqueConstraints=@UniqueConstraint(name="product_parameter_name_column_unique_idx", columnNames="name"))
 @Access(AccessType.PROPERTY)
 public class ProductParameter implements Serializable {
+    
+    public static final String GET_ALL_QUERY = "ProductParameter.getAll";
 
     private int id;
     private String name;

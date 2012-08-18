@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://apache.wicket.com/wicket" xml:lang="en" lang="en">
+    <head>
+        <title>Product parameter administration</title>
+    </head>
+    <body>
+        <h1>Add new product parameter value to existing product parameter</h1>
+        <div wicket:id="feedback"></div>
+        <form wicket:id="form">
+            <label for="product_param_choice">Product parameter:</label>
+            <select id="product_param_choice" wicket:id="product_param" />
+            <br />
+            <label for="product_param_val">Product parameter value:</label>
+            <input id="product_param_val" wicket:id="product_param_val" type="text" size="20" />
+            <br />
+            <input type="submit" value="Add" />
+        </form>
+    </body>
+</html>
