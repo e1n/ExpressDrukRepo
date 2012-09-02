@@ -6,3 +6,6 @@
 /ExpressDruk/ExpressDruk-ear/target/
 /ExpressDruk/ExpressDrukEntities/target/
 /ExpressDruk/ExpressDrukEJB/target/
+/ExpressDruk/ExpressDrukEJBRemoteInterfaces/target/
+/ExpressDruk/ExpressDrukClient/target/
+/ExpressDruk/ExpressDrukWeb/target/
