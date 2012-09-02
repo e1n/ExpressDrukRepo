@@ -8,10 +8,18 @@ import javax.persistence.*;
  *
  * @author e1n
  */
+@NamedQueries({
+    @NamedQuery(name=ProductParameterValue.GET_ALL_QUERY, query="SELECT ppv FROM ProductParameterValue ppv ORDER BY ppv id ASC"),
+    @NamedQuery(name=ProductParameterValue.GET_FOR_GIVEN_PRODUCT_PARAM_QUERY, query="SELECT ppv FROM ProductParameterValue ppv WHERE ppv.productParameter = :product_parameter")
+})
 @Entity
 @Table(name="product_parameter_value")
 @Access(AccessType.PROPERTY)
 public class ProductParameterValue implements Serializable {
+    
+    public static final String GET_ALL_QUERY = "ProductParameterValue.getAll";
+    public static final String GET_FOR_GIVEN_PRODUCT_PARAM_QUERY = "ProductParameterValue.getForGivenProductParamQuery";
+    
     private int id;
     private ProductParameter productParameter;
     private String value;

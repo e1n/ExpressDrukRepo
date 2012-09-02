@@ -1,5 +1,6 @@
 package pl.expressdruk.entities;
 
+import com.google.common.collect.Maps;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -9,16 +10,21 @@ import javax.persistence.*;
  *
  * @author e1n
  */
+@NamedQueries({
+    @NamedQuery(name=Product.GET_ALL_QUERY, query="SELECT p FROM Product p ORDER BY p.id ASC")
+})
 @Access(AccessType.PROPERTY)
 @Entity
 @Table(name="product", uniqueConstraints=@UniqueConstraint(name="product_name_col_unique_idx",columnNames="name"))
 public class Product implements Serializable {
     
+    public static final String GET_ALL_QUERY = "Product.getAll";
+    
     private int id;
     private String name;
     private String description;
     private int version;
-    private Map<ProductParameter,ParamAssignedToProductWithValues> assignedParamsValues;
+    private Map<ProductParameter,ParamAssignedToProductWithValues> assignedParamsValues = Maps.newHashMap();
 
     public Product() {
     }
@@ -65,7 +71,7 @@ public class Product implements Serializable {
         return version;
     }
     
-    @OneToMany(mappedBy="product")
+    @OneToMany(mappedBy="product", fetch= FetchType.EAGER, cascade={CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
     @MapKey(name="productParameter")
     public Map<ProductParameter, ParamAssignedToProductWithValues> getAssignedParamsValues() {
         return assignedParamsValues;

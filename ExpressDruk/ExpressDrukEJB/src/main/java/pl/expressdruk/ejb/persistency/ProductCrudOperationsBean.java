@@ -1,13 +1,11 @@
 package pl.expressdruk.ejb.persistency;
 
+import java.util.List;
 import pl.expressdruk.ejb.remote.interfaces.ProductCrudOperationsBeanRemote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceException;
-import javax.persistence.PersistenceUnit;
+import javax.persistence.*;
 import pl.expressdruk.entities.Product;
 
 /**
@@ -29,7 +27,23 @@ public class ProductCrudOperationsBean implements ProductCrudOperationsBeanRemot
             throw ex;
         }
     }
+    
+    @Override
+    public void merge(Product product) {
+        try {
+            em.merge(product);
+        } catch (PersistenceException ex) {
+            throw ex;
+        }
+    }
 
-    
-    
+    @Override
+    public List<Product> getAll() {
+        try {
+            Query q = em.createNamedQuery(Product.GET_ALL_QUERY);
+            return q.getResultList();
+        } catch (PersistenceException ex) {
+            throw ex;
+        }
+    }   
 }

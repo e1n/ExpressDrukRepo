@@ -31,6 +31,25 @@ public class ExpressdrukBeanAccessFacade {
         }
     }
     
+    public void mergeProduct(Product product) {
+        try {
+            ProductCrudOperationsBeanRemote productCrudBean = locateBean(ProductCrudOperationsBeanRemote.class);
+        productCrudBean.merge(product);
+        } catch (UnableToLocateEjbException ex) {
+            logger.log(Level.SEVERE, "ProductCrudOperationsBean was not found", ex);
+        } 
+    }
+    
+    public List<Product> getAllProducts() {
+        try {
+            ProductCrudOperationsBeanRemote productCrudBean = locateBean(ProductCrudOperationsBeanRemote.class);
+            return productCrudBean.getAll();
+        } catch (UnableToLocateEjbException ex) {
+            logger.log(Level.SEVERE, "ProductCrudOperationsBean was not found", ex);
+        }
+        return Lists.newLinkedList();
+    }
+    
     public void saveProductParameter(ProductParameter productParameter) {
         try {
             ProductParameterCrudOperationsBeanRemote prodParamCrudBean = locateBean(ProductParameterCrudOperationsBeanRemote.class);
@@ -57,6 +76,26 @@ public class ExpressdrukBeanAccessFacade {
         } catch (UnableToLocateEjbException ex) {
             logger.log(Level.SEVERE, "ProductParameterValueCrudOperationsBeanRemote was not found", ex);
         }
+    }
+    
+    public List<ProductParameterValue> getAllProductParameterValues() {
+        try {
+            ProductParameterValueCrudOperationsBeanRemote prodParamValueCrudBean = locateBean(ProductParameterValueCrudOperationsBeanRemote.class);
+            return prodParamValueCrudBean.getAll(); 
+        } catch (UnableToLocateEjbException ex) {
+            logger.log(Level.SEVERE, "ProductParameterValueCrudOperationsBeanRemote was not found", ex);
+        }
+        return Lists.newLinkedList();
+    }
+    
+    public List<ProductParameterValue> getProductParameterValuesForGivenProductParameter(ProductParameter productParameter) {
+        try {
+            ProductParameterValueCrudOperationsBeanRemote prodParamValueCrudBean = locateBean(ProductParameterValueCrudOperationsBeanRemote.class);
+            return prodParamValueCrudBean.getForGivenProductParameter(productParameter);
+        } catch (UnableToLocateEjbException ex) {
+            logger.log(Level.SEVERE, "ProductParameterValueCrudOperationsBeanRemote was not found", ex);
+        }
+        return Lists.newLinkedList();
     }
 
     private JNDINameGenerator getJNDINameGenerator() {

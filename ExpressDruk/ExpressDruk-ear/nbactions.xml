@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-dfdf</actionName>
+            <displayName>dfdf</displayName>
+            <goals>
+                <goal>glassfish:redeploy</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-redeploy on glassfish</actionName>
+            <displayName>redeploy on glassfish</displayName>
+            <goals>
+                <goal>glassfish:redeploy</goal>
+            </goals>
+        </action>
+    </actions>
