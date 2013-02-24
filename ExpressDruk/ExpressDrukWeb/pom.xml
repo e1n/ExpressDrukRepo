@@ -13,7 +13,7 @@
 	<!-- TODO project name  -->
     <name>ExpressDrukWeb</name>
 	<!--
-		TODO <organization> <name>company name</name> <url>company url</url>
+		TODO <organization> <name>co 1mpany name</name> <url>company url</url>
 		</organization>
 	-->
     <licenses>
@@ -24,7 +24,7 @@
         </license>
     </licenses>
     <properties>
-        <wicket.version>1.5.7</wicket.version>
+        <wicket.version>6.5.0</wicket.version>
         <jetty.version>7.5.0.v20110901</jetty.version>
     </properties>
     <dependencies>

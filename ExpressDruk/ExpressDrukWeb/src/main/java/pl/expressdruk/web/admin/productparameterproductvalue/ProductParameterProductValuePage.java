@@ -2,6 +2,7 @@ package pl.expressdruk.web.admin.productparameterproductvalue;
 
 import com.google.common.collect.Sets;
 import java.util.Map;
+import org.apache.wicket.devutils.debugbar.DebugBar;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.ChoiceRenderer;
 import org.apache.wicket.markup.html.form.DropDownChoice;
@@ -33,6 +34,9 @@ public class ProductParameterProductValuePage extends WebPage {
         super(parameters);
 
         productParameterModel = new PropertyModel<ProductParameter>(this, "productParameter");
+        
+        DebugBar debugBar = new DebugBar("debug");
+        add(debugBar);
 
         add(new FeedbackPanel("feedback"));
 
@@ -52,6 +56,7 @@ public class ProductParameterProductValuePage extends WebPage {
                 }
                 product.setAssignedParamsValues(assignedParamsAndVals);
                 new ExpressdrukBeanAccessFacade().mergeProduct(product);
+                info("product parameter and value added to product sucessfuly");
             }
         };
 
