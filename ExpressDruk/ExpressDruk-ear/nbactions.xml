@@ -14,4 +14,11 @@
                 <goal>glassfish:redeploy</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-ear</actionName>
+            <displayName>ear</displayName>
+            <goals>
+                <goal>ear:ear</goal>
+            </goals>
+        </action>
     </actions>

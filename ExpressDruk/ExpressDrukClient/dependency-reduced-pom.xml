@@ -8,7 +8,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.expressdruk</groupId>
   <artifactId>client</artifactId>
-  <packaging>app-client</packaging>
   <name>ExpressDrukClient</name>
   <version>1.0-SNAPSHOT</version>
   <build>

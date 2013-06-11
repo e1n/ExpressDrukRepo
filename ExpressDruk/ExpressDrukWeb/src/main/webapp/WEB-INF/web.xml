@@ -5,8 +5,8 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
-    <welcome-file-list>welcome-file-list
-        <welcome-file>/faces/admin/adminTemplate.xhtml</welcome-file>
+    <welcome-file-list>
+        <welcome-file>faces/admin/addProductParameter.xhtml</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
